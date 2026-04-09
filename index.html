@@ -1,170 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portuga</title>
 
 <style>
+
+/* BODY */
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#ffffff;
-  color:#222;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(#1a0000,#000);
+color:white;
 }
 
-header{
-  text-align:center;
-  padding:60px 20px;
-  background:linear-gradient(135deg,#eaf6ff,#ffffff);
+/* HEADER */
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#120000;
+border-bottom:1px solid #333;
 }
 
-.profile{
-  width:140px;
-  border-radius:50%;
-  margin-bottom:20px;
-  box-shadow:0 0 25px #5fb8ff;
-  transition:0.3s;
+.logo{
+color:#facc15;
+font-weight:bold;
+font-size:22px;
 }
 
-.profile:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 35px #3fa9f5;
+.menu{
+font-size:24px;
+cursor:pointer;
 }
 
-h1{
-  font-size:3em;
-  color:#3fa9f5;
-  margin:0;
+/* TITLE */
+.section-title{
+padding:20px;
+font-size:26px;
+color:#facc15;
+font-weight:bold;
 }
 
-.button{
-  background:#3fa9f5;
-  color:white;
-  padding:14px 32px;
-  border-radius:10px;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  margin-top:20px;
-  transition:0.3s;
+/* CARD */
+.server-card{
+position:relative;
+background:#111;
+border-radius:20px;
+overflow:hidden;
+margin:20px;
+box-shadow:0 0 30px rgba(0,0,0,0.6);
+transition:0.3s;
 }
 
-.button:hover{
-  background:#2b8fd9;
-  transform:scale(1.05);
+.server-card:hover{
+transform:scale(1.02);
 }
 
-.section{
-  padding:50px 20px;
-  text-align:center;
+/* IMAGE */
+.server-img{
+width:100%;
+height:180px;
+object-fit:cover;
+filter:brightness(0.75);
 }
 
-.skills-container{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-  margin-top:30px;
+/* INFO */
+.server-info{
+padding:15px;
 }
 
-.skill-card{
-  background:white;
-  border:2px solid #a8dcff;
-  border-radius:15px;
-  padding:20px;
-  width:230px;
-  transition:0.3s;
-  box-shadow:0 0 10px rgba(0,0,0,0.05);
+.server-info h2{
+margin:0;
+font-size:22px;
 }
 
-.skill-card:hover{
-  transform:scale(1.07);
-  border-color:#3fa9f5;
-  box-shadow:0 0 25px #3fa9f5;
+.server-info a{
+display:inline-block;
+margin-top:10px;
+color:#facc15;
+text-decoration:none;
+font-weight:bold;
 }
 
-.skill-card h3{
-  color:#3fa9f5;
+/* BADGE */
+.badge{
+position:absolute;
+top:10px;
+right:10px;
+background:#16a34a;
+padding:6px 10px;
+border-radius:8px;
+font-size:12px;
+font-weight:bold;
 }
 
-footer{
-  text-align:center;
-  padding:25px;
-  color:#777;
-}
 </style>
+
 </head>
 
 <body>
 
-<header>
-<img src="profile.jpg" class="profile">
-<h1>Portuga</h1>
-<p>Welcome to my personal page</p>
-<a href="https://discord.com" class="button">💬 Contact me on Discord</a>
-<p>
-I am a Discord moderator and a native Portuguese [PT] speaker. I am always willing to help and I also do my best in what I do. I always look for more experience and also help on the servers where I am staff.
-</p>
-</header>
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">⚓ MKX</div>
+  <div class="menu">☰</div>
+</div>
 
-<section class="section">
-<h2>Skills</h2>
-<div class="skills-container">
-<div class="skill-card">
-<h3>Chat & Voice Moderation</h3>
-<p>Managing chats and voice channels to ensure smooth communication.</p>
-</div>
-<div class="skill-card">
-<h3>Member Support</h3>
-<p>Helping members with questions and server issues.</p>
-</div>
-<div class="skill-card">
-<h3>Rule Enforcement</h3>
-<p>Applying server rules fairly and maintaining order.</p>
-</div>
-<div class="skill-card">
-<h3>Conflict Resolution</h3>
-<p>Resolving disputes to keep the community friendly.</p>
-</div>
-</div>
-</section>
+<!-- TITLE -->
+<div class="section-title">COMUNIDADES</div>
 
-<section class="section">
-<h2>Areas of Expertise</h2>
-<p style="max-width:700px;margin:auto;margin-top:20px;">
-My job as a staff is to keep the server organized, help members, resolve conflicts, and punish those who do not follow the rules.
-</p>
-</section>
+<!-- SERVIDOR 1 -->
+<div class="server-card">
+  <img src="https://i.imgur.com/8Km9tLL.jpg" class="server-img">
+  <div class="badge">Trial Moderador</div>
 
-<section class="section">
-<h2>Servers Where I Am Staff</h2>
-<div class="skills-container">
-<div class="skill-card">
-<h3>Anime all</h3>
-<p>I help moderate and support members in this community server.</p>
-<a href="https://discord.gg/HWaamV88AM" class="button">Join Server</a>
+  <div class="server-info">
+    <h2>Anime Crash</h2>
+    <a href="https://discord.gg/HWaamV88AM">Visitar Servidor →</a>
+  </div>
 </div>
-<div class="skill-card">
-<h3>[IN DEV] Anime vikings x</h3>
-<p>Currently in development, I assist with organizing and testing the server.</p>
-<a href="https://discord.gg/r5apZRZ6aK" class="button">Join Server</a>
-</div>
-</div>
-</section>
 
-<section class="section">
-<h2>Other Discord Links</h2>
-<div style="display:flex; flex-direction:column; align-items:center; gap:15px; margin-top:20px;">
-<a href="https://discord.gg/HWaamV88AM" class="button">🌐 Anime all</a>
-<a href="https://discord.gg/r5apZRZ6aK" class="button">🚀 [IN DEV] Anime vikings x</a>
-</div>
-</section>
+<!-- SERVIDOR 2 -->
+<div class="server-card">
+  <img src="https://i.imgur.com/ZcLLrkY.jpg" class="server-img">
+  <div class="badge">Trial Moderador</div>
 
-<footer>
-© 2026 Portuga
-</footer>
+  <div class="server-info">
+    <h2>[WIP] Anime Astral</h2>
+    <a href="https://discord.gg/r5apZRZ6aK">Visitar Servidor →</a>
+  </div>
+</div>
 
 </body>
 </html>
