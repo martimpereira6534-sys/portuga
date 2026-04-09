@@ -9,92 +9,102 @@
 
 /* BODY */
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(#1a0000,#000);
-color:white;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(#1a0000,#000);
+  color:white;
 }
 
 /* HEADER */
 .header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-background:#120000;
-border-bottom:1px solid #333;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  background:#120000;
+  border-bottom:1px solid #333;
 }
 
 .logo{
-color:#facc15;
-font-weight:bold;
-font-size:22px;
+  color:#facc15;
+  font-weight:bold;
+  font-size:22px;
 }
 
 .menu{
-font-size:24px;
-cursor:pointer;
+  font-size:24px;
+  cursor:pointer;
 }
 
 /* TITLE */
 .section-title{
-padding:20px;
-font-size:26px;
-color:#facc15;
-font-weight:bold;
+  padding:20px;
+  font-size:26px;
+  color:#facc15;
+  font-weight:bold;
 }
 
 /* CARD */
 .server-card{
-position:relative;
-background:#111;
-border-radius:20px;
-overflow:hidden;
-margin:20px;
-box-shadow:0 0 30px rgba(0,0,0,0.6);
-transition:0.3s;
+  position:relative;
+  background:#111;
+  border-radius:20px;
+  overflow:hidden;
+  margin:20px;
+  box-shadow:0 0 30px rgba(0,0,0,0.6);
+  transition:0.3s;
 }
 
 .server-card:hover{
-transform:scale(1.02);
+  transform:scale(1.02);
 }
 
 /* IMAGE */
 .server-img{
-width:100%;
-height:180px;
-object-fit:cover;
-filter:brightness(0.75);
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  filter:brightness(0.75);
 }
 
 /* INFO */
 .server-info{
-padding:15px;
+  padding:15px;
 }
 
 .server-info h2{
-margin:0;
-font-size:22px;
+  margin:0;
+  font-size:22px;
 }
 
 .server-info a{
-display:inline-block;
-margin-top:10px;
-color:#facc15;
-text-decoration:none;
-font-weight:bold;
+  display:inline-block;
+  margin-top:10px;
+  color:#facc15;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.server-info a:hover {
+  color:#fff;
+  text-decoration:underline;
 }
 
 /* BADGE */
 .badge{
-position:absolute;
-top:10px;
-right:10px;
-background:#16a34a;
-padding:6px 10px;
-border-radius:8px;
-font-size:12px;
-font-weight:bold;
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:#16a34a;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.badge:hover {
+  background:#10b981;
+  transition:0.3s;
 }
 
 </style>
@@ -114,22 +124,22 @@ font-weight:bold;
 
 <!-- SERVIDOR 1 -->
 <div class="server-card">
-  <img src="https://i.imgur.com/8Km9tLL.jpg" class="server-img">
+  <img src="https://i.imgur.com/8Km9tLL.jpg" class="server-img" alt="Anime All">
   <div class="badge">Trial Moderador</div>
 
   <div class="server-info">
-    <h2>Anime Crash</h2>
+    <h2>Anime All</h2>
     <a href="https://discord.gg/HWaamV88AM">Visitar Servidor →</a>
   </div>
 </div>
 
 <!-- SERVIDOR 2 -->
 <div class="server-card">
-  <img src="https://i.imgur.com/ZcLLrkY.jpg" class="server-img">
+  <img src="https://i.imgur.com/ZcLLrkY.jpg" class="server-img" alt="Anime Vikings X [IN DEV]">
   <div class="badge">Trial Moderador</div>
 
   <div class="server-info">
-    <h2>[WIP] Anime Astral</h2>
+    <h2>Anime Vikings X [IN DEV]</h2>
     <a href="https://discord.gg/r5apZRZ6aK">Visitar Servidor →</a>
   </div>
 </div>
