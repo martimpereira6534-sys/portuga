@@ -11,9 +11,22 @@
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:linear-gradient(#000000, #1a1a1a);
+  background:linear-gradient(135deg, #000000, #0f0f0f, #1a1a1a);
+  position:relative;
   color:white;
   animation:fadeIn 1s ease-in;
+}
+
+/* AMARELO GLOW NO FUNDO */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:radial-gradient(circle at top, rgba(250,204,21,0.15), transparent 60%);
+  pointer-events:none;
 }
 
 /* FADE IN */
@@ -104,7 +117,6 @@ body{
   font-size:16px;
   line-height:1.5;
   color:#d4d4d4;
-  animation:slideUp 1s ease;
 }
 
 /* TITLE */
@@ -114,7 +126,6 @@ body{
   color:#facc15;
   font-weight:bold;
   text-align:center;
-  animation:slideUp 1.2s ease;
 }
 
 /* CARD */
@@ -124,10 +135,9 @@ body{
   border-radius:20px;
   overflow:hidden;
   margin:20px;
+  border:1px solid #222;
   box-shadow:0 0 30px rgba(0,0,0,0.6);
   transition:all 0.4s ease;
-  animation:slideUp 1.4s ease;
-  border:1px solid #222;
 }
 
 .server-card:hover{
@@ -185,24 +195,11 @@ body{
   border-radius:8px;
   font-size:12px;
   font-weight:bold;
-  transition:0.3s;
 }
 
 .badge:hover{
   background:white;
   box-shadow:0 0 10px #facc15;
-}
-
-/* ANIMATION */
-@keyframes slideUp{
-  from{
-    opacity:0;
-    transform:translateY(30px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
 }
 
 </style>
