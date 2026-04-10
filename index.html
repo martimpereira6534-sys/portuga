@@ -43,9 +43,32 @@ body{
   cursor:pointer;
 }
 
+/* AVATAR */
+.avatar-container{
+  display:flex;
+  justify-content:center;
+  margin-top:30px;
+}
+
+.avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #facc15;
+  box-shadow:0 0 25px rgba(255, 0, 0, 0.6);
+  transition:0.3s;
+}
+
+.avatar:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 40px rgba(255, 0, 0, 0.9);
+}
+
 /* INTRO */
 .intro{
   padding:20px;
+  text-align:center;
   font-size:16px;
   line-height:1.5;
   color:#f0e68c;
@@ -58,6 +81,7 @@ body{
   font-size:26px;
   color:#facc15;
   font-weight:bold;
+  text-align:center;
   animation:slideUp 1.2s ease;
 }
 
@@ -73,7 +97,6 @@ body{
   animation:slideUp 1.4s ease;
 }
 
-/* HOVER MODERNO */
 .server-card:hover{
   transform:scale(1.05) translateY(-5px);
   box-shadow:0 0 40px rgba(255,0,0,0.6);
@@ -88,7 +111,6 @@ body{
   transition:0.4s;
 }
 
-/* ZOOM NA IMAGEM */
 .server-card:hover .server-img{
   transform:scale(1.1);
   filter:brightness(0.9);
@@ -161,6 +183,11 @@ body{
   <div class="menu">☰</div>
 </div>
 
+<!-- AVATAR -->
+<div class="avatar-container">
+  <img src="https://i.imgur.com/uP6CqxD.jpeg" class="avatar" alt="Avatar Portuga">
+</div>
+
 <!-- INTRO -->
 <div class="intro">
 👋 Hello, I’m Portuga, an experienced Moderator / Staff on Discord. I specialize in keeping servers safe, organized, and active.
@@ -171,7 +198,7 @@ body{
 
 <!-- SERVIDOR 1 -->
 <div class="server-card">
-  <img src="anime-all.png" class="server-img" alt="Anime All">
+  <img src="https://i.imgur.com/EfdCjgJ.jpeg" class="server-img" alt="Anime All">
   <div class="badge">Moderador</div>
 
   <div class="server-info">
@@ -182,7 +209,7 @@ body{
 
 <!-- SERVIDOR 2 -->
 <div class="server-card">
-  <img src="anime-vikings.png" class="server-img" alt="Anime Vikings X [IN DEV]">
+  <img src="https://i.imgur.com/DbxLw7W.jpeg" class="server-img" alt="Anime Vikings X [IN DEV]">
   <div class="badge">Trial Moderador</div>
 
   <div class="server-info">
@@ -192,4 +219,4 @@ body{
 </div>
 
 </body>
-</html>>
+</html>
