@@ -46,7 +46,8 @@ body{
 /* AVATAR */
 .avatar-container{
   display:flex;
-  justify-content:center;
+  flex-direction:column;
+  align-items:center;
   margin-top:30px;
 }
 
@@ -63,6 +64,36 @@ body{
 .avatar:hover{
   transform:scale(1.05);
   box-shadow:0 0 40px rgba(255, 0, 0, 0.9);
+}
+
+/* DISCORD TAG */
+.discord-tag{
+  margin-top:10px;
+  font-size:14px;
+  color:#facc15;
+  background:rgba(0,0,0,0.4);
+  padding:6px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  transition:0.3s;
+}
+
+.discord-tag a{
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.discord-tag:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 15px rgba(250,204,21,0.4);
+}
+
+.discord-tag a:hover{
+  color:#facc15;
+  text-shadow:0 0 10px #facc15;
 }
 
 /* INTRO */
@@ -159,7 +190,7 @@ body{
   box-shadow:0 0 10px #10b981;
 }
 
-/* SLIDE UP */
+/* ANIMATION */
 @keyframes slideUp{
   from{
     opacity:0;
@@ -186,6 +217,14 @@ body{
 <!-- AVATAR -->
 <div class="avatar-container">
   <img src="https://i.imgur.com/uP6CqxD.jpeg" class="avatar" alt="Avatar Portuga">
+
+  <!-- DISCORD -->
+  <div class="discord-tag">
+    💬 Discord:
+    <a href="https://discord.com/users/1391000327708475465" target="_blank">
+      Contact me on Discord
+    </a>
+  </div>
 </div>
 
 <!-- INTRO -->
@@ -219,4 +258,4 @@ body{
 </div>
 
 </body>
-</html>
+</html>>
