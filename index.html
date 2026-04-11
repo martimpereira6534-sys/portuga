@@ -3,20 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portuga | Staff Portfolio</title>
+<title>Portuga | Staff Portfolio Pro</title>
 
 <style>
 
+/* RESET */
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
   font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-  background:linear-gradient(135deg,#000,#111);
+  background:linear-gradient(135deg,#0a0a0a,#111827);
   color:white;
+  overflow-x:hidden;
+}
+
+/* ANIMATED BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:radial-gradient(circle at 20% 20%, rgba(99,102,241,0.2), transparent 40%),
+             radial-gradient(circle at 80% 80%, rgba(168,85,247,0.2), transparent 40%);
+  z-index:-1;
 }
 
 /* HEADER */
@@ -25,17 +40,17 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:15px 25px;
-  background:rgba(0,0,0,0.85);
-  border-bottom:1px solid #222;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
   position:sticky;
   top:0;
-  z-index:10;
 }
 
 .logo{
-  color:#facc15;
   font-weight:bold;
-  font-size:20px;
+  color:#a855f7;
+  letter-spacing:1px;
 }
 
 .menu{
@@ -45,36 +60,37 @@ body{
 }
 
 .menu:hover{
-  color:#facc15;
+  color:#a855f7;
+  transform:scale(1.1);
 }
 
 /* PROFILE */
 .profile{
   text-align:center;
-  padding:30px 20px;
+  padding:50px 20px 20px;
 }
 
 .avatar{
-  width:130px;
-  height:130px;
+  width:140px;
+  height:140px;
   border-radius:50%;
-  border:3px solid #facc15;
-  box-shadow:0 0 25px rgba(250,204,21,0.3);
-  margin-bottom:15px;
+  border:3px solid #a855f7;
+  box-shadow:0 0 30px rgba(168,85,247,0.4);
   transition:0.3s;
 }
 
 .avatar:hover{
-  transform:scale(1.05);
+  transform:scale(1.08);
 }
 
 .name{
-  font-size:22px;
+  font-size:26px;
   font-weight:bold;
+  margin-top:10px;
 }
 
 .role{
-  color:#facc15;
+  color:#a855f7;
   margin-top:5px;
 }
 
@@ -82,166 +98,166 @@ body{
 .btn{
   display:inline-block;
   margin-top:15px;
-  padding:10px 15px;
-  background:#facc15;
-  color:#000;
-  font-weight:bold;
-  border-radius:10px;
+  padding:10px 18px;
+  background:#a855f7;
+  color:white;
+  border-radius:12px;
   text-decoration:none;
   transition:0.3s;
+  font-weight:bold;
 }
 
 .btn:hover{
-  background:white;
+  background:#fff;
+  color:#000;
+  transform:translateY(-2px);
 }
 
 /* CONTAINER */
 .container{
-  max-width:900px;
+  max-width:950px;
   margin:auto;
   padding:20px;
 }
 
 /* SECTION */
 .section{
-  margin-top:30px;
+  margin-top:35px;
+  animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 .section h2{
-  color:#facc15;
+  color:#a855f7;
   margin-bottom:10px;
-  border-left:4px solid #facc15;
+  border-left:4px solid #a855f7;
   padding-left:10px;
 }
 
-/* ABOUT */
+/* CARD */
 .card{
-  background:rgba(20,20,20,0.8);
-  padding:15px;
+  background:rgba(255,255,255,0.05);
+  padding:18px;
   border-radius:15px;
-  border:1px solid #222;
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
 }
 
 /* SKILLS */
 .skill{
-  margin:10px 0;
+  margin:10px 0 5px;
 }
 
 .bar{
-  background:#222;
+  background:#1f2937;
   border-radius:10px;
   overflow:hidden;
 }
 
 .progress{
   height:10px;
-  background:#facc15;
+  background:linear-gradient(90deg,#a855f7,#6366f1);
 }
 
-/* SERVERS */
+/* SERVER */
 .server{
   display:flex;
   align-items:center;
   gap:15px;
-  background:rgba(20,20,20,0.8);
+  background:rgba(255,255,255,0.05);
   padding:15px;
   border-radius:15px;
-  border:1px solid #222;
   margin-top:10px;
+  border:1px solid rgba(255,255,255,0.08);
   transition:0.3s;
 }
 
 .server:hover{
   transform:translateY(-5px);
-  border-color:#facc15;
+  border-color:#a855f7;
 }
 
 .server img{
-  width:80px;
-  height:80px;
-  border-radius:10px;
-  object-fit:cover;
+  width:75px;
+  height:75px;
+  border-radius:12px;
 }
 
+/* BADGE */
 .badge{
-  display:inline-block;
-  background:#facc15;
-  color:#000;
+  background:#a855f7;
   padding:4px 8px;
   border-radius:8px;
   font-size:12px;
+  display:inline-block;
   margin-top:5px;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:20px;
-  margin-top:30px;
+  padding:25px;
   color:#666;
   font-size:12px;
+  margin-top:40px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
-  <div class="logo">Portuga | Staff Portfolio</div>
+  <div class="logo">PORTUGA • STAFF PRO</div>
   <div class="menu">☰</div>
 </div>
 
-<!-- PROFILE -->
 <div class="profile">
   <img src="https://i.imgur.com/uP6CqxD.jpeg" class="avatar">
   <div class="name">Portuga</div>
-  <div class="role">Discord Staff / Moderator</div>
-  <a class="btn" href="https://discord.com">Contact me on Discord</a>
+  <div class="role">Discord Staff • Moderator</div>
+  <a class="btn" href="https://discord.com">Contact Discord</a>
 </div>
 
 <div class="container">
 
-  <!-- ABOUT -->
   <div class="section">
     <h2>About Me</h2>
     <div class="card">
-      I am an experienced Discord staff member specialized in moderation, support, and community management.  
-      I have worked in anime and gaming servers, ensuring safety, organization, and active communities.
+      Experienced Discord Staff member focused on moderation, ticket handling and community growth.  
+      I ensure safe, active and organized communities.
     </div>
   </div>
 
-  <!-- SKILLS -->
   <div class="section">
     <h2>Skills</h2>
-
     <div class="card">
 
       <div class="skill">Moderation</div>
-      <div class="bar"><div class="progress" style="width:85%"></div></div>
+      <div class="bar"><div class="progress" style="width:88%"></div></div>
 
-      <div class="skill">Support</div>
-      <div class="bar"><div class="progress" style="width:70%"></div></div>
+      <div class="skill">Support / Ticket Handling</div>
+      <div class="bar"><div class="progress" style="width:75%"></div></div>
 
-      <div class="skill">Community Management</div>
-      <div class="bar"><div class="progress" style="width:90%"></div></div>
+      <div class="skill">Discord Moderation & Support</div>
+      <div class="bar"><div class="progress" style="width:92%"></div></div>
 
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
   <div class="section">
     <h2>Experience</h2>
     <div class="card">
-      🛡️ Active staff in multiple anime communities<br>
-      ⚡ Fast and efficient ticket handling<br>
-      🤝 Helping servers grow and stay organized<br>
+      🛡️ Staff in multiple anime servers<br>
+      ⚡ Fast ticket response & moderation<br>
+      🤝 Helping servers grow & stay active
     </div>
   </div>
 
-  <!-- SERVERS -->
   <div class="section">
     <h2>Servers</h2>
 
@@ -266,7 +282,7 @@ footer{
 </div>
 
 <footer>
-  © 2026 Portuga Staff Portfolio • Discord Community
+  © 2026 Portuga • Discord Staff Portfolio Pro
 </footer>
 
 </body>
