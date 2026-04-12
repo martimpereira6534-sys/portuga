@@ -94,25 +94,6 @@ body::before{
   margin-top:5px;
 }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 18px;
-  background:#a855f7;
-  color:white;
-  border-radius:12px;
-  text-decoration:none;
-  transition:0.3s;
-  font-weight:bold;
-}
-
-.btn:hover{
-  background:#fff;
-  color:#000;
-  transform:translateY(-2px);
-}
-
 /* CONTAINER */
 .container{
   max-width:950px;
@@ -138,7 +119,6 @@ body::before{
   padding:18px;
   border-radius:15px;
   border:1px solid rgba(255,255,255,0.08);
-  backdrop-filter:blur(10px);
 }
 
 /* SKILLS */
@@ -157,44 +137,51 @@ body::before{
   background:linear-gradient(90deg,#a855f7,#6366f1);
 }
 
-/* SERVER */
-.server{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  background:rgba(255,255,255,0.05);
-  padding:15px;
-  border-radius:15px;
-  margin-top:10px;
-  border:1px solid rgba(255,255,255,0.08);
+/* 🔥 SERVER BANNER STYLE */
+.server-card{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:15px;
+  border:1px solid rgba(255,255,255,0.1);
   transition:0.3s;
 }
 
-.server:hover{
-  transform:translateY(-5px);
+.server-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  filter:brightness(0.7);
+}
+
+.server-card:hover{
+  transform:scale(1.02);
   border-color:#a855f7;
 }
 
-.server img{
-  width:75px;
-  height:75px;
-  border-radius:12px;
+.server-info{
+  position:absolute;
+  bottom:15px;
+  left:15px;
 }
 
-/* LINKS */
-.server a{
-  color:#a855f7;
+.server-info h3{
+  margin-bottom:5px;
+}
+
+.server-info a{
+  color:#facc15;
   text-decoration:none;
   font-weight:bold;
 }
 
-.server a:hover{
+.server-info a:hover{
   text-decoration:underline;
 }
 
 /* BADGE */
 .badge{
-  background:#a855f7;
+  background:#22c55e;
   padding:4px 8px;
   border-radius:8px;
   font-size:12px;
@@ -265,21 +252,33 @@ footer{
   <div class="section">
     <h2>Servers</h2>
 
-    <div class="server">
-      <img src="https://i.imgur.com/EfdCjgJ.jpeg">
-      <div>
-        <strong>Anime All</strong><br>
-        <span class="badge">Moderator</span><br>
-        <a href="https://discord.gg/HWaamV88AM" target="_blank">Join Server</a>
+    <!-- 🔥 Anime Crash -->
+    <div class="server-card">
+      <img src="https://i.imgur.com/fTE1UC9.jpeg">
+      <div class="server-info">
+        <h3>Anime Crash</h3>
+        <span class="badge">Trial Moderator</span><br>
+        <a href="https://discord.gg/uhsCy8e2jn" target="_blank">Visitar Servidor →</a>
       </div>
     </div>
 
-    <div class="server">
+    <!-- Anime All -->
+    <div class="server-card">
+      <img src="https://i.imgur.com/EfdCjgJ.jpeg">
+      <div class="server-info">
+        <h3>Anime All</h3>
+        <span class="badge">Moderator</span><br>
+        <a href="https://discord.gg/HWaamV88AM" target="_blank">Visitar Servidor →</a>
+      </div>
+    </div>
+
+    <!-- Anime Vikings -->
+    <div class="server-card">
       <img src="https://i.imgur.com/DbxLw7W.jpeg">
-      <div>
-        <strong>Anime Vikings X</strong><br>
+      <div class="server-info">
+        <h3>Anime Vikings X</h3>
         <span class="badge">Trial Moderator</span><br>
-        <a href="https://discord.gg/r5apZRZ6aK" target="_blank">Join Server</a>
+        <a href="https://discord.gg/r5apZRZ6aK" target="_blank">Visitar Servidor →</a>
       </div>
     </div>
 
