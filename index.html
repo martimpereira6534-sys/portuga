@@ -1,287 +1,316 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Portuga | Staff Portfolio</title>  <style>  
-  
-/* RESET */  
-*{  
-  margin:0;  
-  padding:0;  
-  box-sizing:border-box;  
-  font-family:Arial, Helvetica, sans-serif;  
-}  
-  
-body{  
-  background:linear-gradient(135deg,#0a0a0a,#0f172a);  
-  color:white;  
-  overflow-x:hidden;  
-}  
-  
-/* BACKGROUND GLOW */  
-body::before{  
-  content:"";  
-  position:fixed;  
-  inset:0;  
-  background:  
-    radial-gradient(circle at 20% 20%, rgba(168,85,247,0.25), transparent 40%),  
-    radial-gradient(circle at 80% 70%, rgba(99,102,241,0.25), transparent 40%);  
-  z-index:-1;  
-}  
-  
-/* HEADER */  
-.header{  
-  display:flex;  
-  justify-content:space-between;  
-  align-items:center;  
-  padding:15px 25px;  
-  background:rgba(0,0,0,0.5);  
-  backdrop-filter:blur(12px);  
-  border-bottom:1px solid rgba(255,255,255,0.08);  
-  position:sticky;  
-  top:0;  
-  z-index:10;  
-}  
-  
-.logo{  
-  font-weight:bold;  
-  color:#a855f7;  
-  letter-spacing:2px;  
-}  
-  
-.menu{  
-  font-size:26px;  
-  cursor:pointer;  
-  transition:0.3s;  
-}  
-  
-.menu:hover{  
-  color:#a855f7;  
-  transform:rotate(90deg);  
-}  
-  
-/* PROFILE */  
-.profile{  
-  text-align:center;  
-  padding:60px 20px 30px;  
-  animation:fadeIn 1s ease;  
-}  
-  
-.avatar{  
-  width:150px;  
-  height:150px;  
-  border-radius:50%;  
-  border:3px solid #a855f7;  
-  box-shadow:0 0 35px rgba(168,85,247,0.5);  
-  transition:0.3s;  
-}  
-  
-.avatar:hover{  
-  transform:scale(1.1);  
-}  
-  
-.name{  
-  font-size:28px;  
-  font-weight:bold;  
-  margin-top:12px;  
-}  
-  
-.role{  
-  color:#a855f7;  
-  margin-top:5px;  
-}  
-  
-/* CONTAINER */  
-.container{  
-  max-width:950px;  
-  margin:auto;  
-  padding:20px;  
-}  
-  
-/* SECTIONS */  
-.section{  
-  margin-top:40px;  
-  animation:slideUp 0.8s ease;  
-}  
-  
-.section h2{  
-  color:#a855f7;  
-  margin-bottom:12px;  
-  border-left:4px solid #a855f7;  
-  padding-left:10px;  
-}  
-  
-/* CARD */  
-.card{  
-  background:rgba(255,255,255,0.05);  
-  padding:18px;  
-  border-radius:15px;  
-  border:1px solid rgba(255,255,255,0.08);  
-  backdrop-filter:blur(10px);  
-}  
-  
-/* SKILLS */  
-.skill{  
-  margin:12px 0 5px;  
-}  
-  
-.bar{  
-  background:#1f2937;  
-  border-radius:10px;  
-  overflow:hidden;  
-}  
-  
-.progress{  
-  height:10px;  
-  background:linear-gradient(90deg,#a855f7,#6366f1);  
-  border-radius:10px;  
-}  
-  
-/* SERVER CARD */  
-.server-card{  
-  position:relative;  
-  border-radius:20px;  
-  overflow:hidden;  
-  margin-top:15px;  
-  border:1px solid rgba(255,255,255,0.1);  
-  transition:0.3s;  
-}  
-  
-.server-card img{  
-  width:100%;  
-  height:180px;  
-  object-fit:cover;  
-  filter:brightness(0.65);  
-  transition:0.3s;  
-}  
-  
-.server-card:hover{  
-  transform:scale(1.03);  
-  border-color:#a855f7;  
-}  
-  
-.server-card:hover img{  
-  transform:scale(1.05);  
-  filter:brightness(0.8);  
-}  
-  
-.server-info{  
-  position:absolute;  
-  bottom:15px;  
-  left:15px;  
-}  
-  
-.server-info h3{  
-  margin-bottom:5px;  
-}  
-  
-.server-info a{  
-  color:#facc15;  
-  text-decoration:none;  
-  font-weight:bold;  
-}  
-  
-.server-info a:hover{  
-  text-decoration:underline;  
-}  
-  
-.badge{  
-  background:#a855f7;  
-  padding:4px 8px;  
-  border-radius:8px;  
-  font-size:12px;  
-  display:inline-block;  
-  margin-top:5px;  
-}  
-  
-/* FOOTER */  
-footer{  
-  text-align:center;  
-  padding:25px;  
-  color:#666;  
-  font-size:12px;  
-  margin-top:40px;  
-}  
-  
-/* ANIMATIONS */  
-@keyframes fadeIn{  
-  from{opacity:0; transform:translateY(-20px);}  
-  to{opacity:1; transform:translateY(0);}  
-}  
-  
-@keyframes slideUp{  
-  from{opacity:0; transform:translateY(30px);}  
-  to{opacity:1; transform:translateY(0);}  
-}  
-  
-/* MOBILE */  
-@media(max-width:600px){  
-  .name{font-size:22px;}  
-  .avatar{width:120px;height:120px;}  
-}  
-  
-</style>  </head>  <body>  <div class="header">  
-  <div class="logo">PORTUGA</div>  
-  <div class="menu">☰</div>  
-</div>  <div class="profile">  
-  <img src="https://i.imgur.com/QsXBePc.jpeg" class="avatar">  
-  <div class="name">portuga</div>  
-  <div class="role">Discord Staff • Moderator</div>  
-</div>  <div class="container">    <div class="section">  
-    <h2>About Me</h2>  
-    <div class="card">  
-      Experienced Discord Staff member focused on moderation, ticket handling and community growth.  
-      I ensure safe, active and organized communities.  
-    </div>  
-  </div>    <div class="section">  
-    <h2>Skills</h2>  
-    <div class="card">  <div class="skill">Moderation</div>  
-  <div class="bar"><div class="progress" style="width:88%"></div></div>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portuga | Staff Portfolio</title>
 
-  <div class="skill">Ticket Handling</div>  
-  <div class="bar"><div class="progress" style="width:75%"></div></div>  
+<style>
 
-  <div class="skill">Community Support</div>  
-  <div class="bar"><div class="progress" style="width:92%"></div></div>  
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#0a0a0a,#0f172a);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(168,85,247,0.25), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(99,102,241,0.25), transparent 40%);
+  z-index:-1;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.logo{
+  font-weight:bold;
+  color:#a855f7;
+  letter-spacing:2px;
+}
+
+.menu{
+  font-size:26px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.menu:hover{
+  color:#a855f7;
+  transform:rotate(90deg);
+}
+
+/* PROFILE */
+.profile{
+  text-align:center;
+  padding:60px 20px 30px;
+  animation:fadeIn 1s ease;
+}
+
+.avatar{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border:3px solid #a855f7;
+  box-shadow:0 0 35px rgba(168,85,247,0.5);
+  transition:0.3s;
+}
+
+.avatar:hover{
+  transform:scale(1.1);
+}
+
+.name{
+  font-size:28px;
+  font-weight:bold;
+  margin-top:12px;
+}
+
+.role{
+  color:#a855f7;
+  margin-top:5px;
+}
+
+/* CONTAINER */
+.container{
+  max-width:950px;
+  margin:auto;
+  padding:20px;
+}
+
+/* SECTIONS */
+.section{
+  margin-top:40px;
+  animation:slideUp 0.8s ease;
+}
+
+.section h2{
+  color:#a855f7;
+  margin-bottom:12px;
+  border-left:4px solid #a855f7;
+  padding-left:10px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:18px;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+}
+
+/* SKILLS */
+.skill{
+  margin:12px 0 5px;
+}
+
+.bar{
+  background:#1f2937;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.progress{
+  height:10px;
+  background:linear-gradient(90deg,#a855f7,#6366f1);
+  border-radius:10px;
+}
+
+/* SERVER CARD */
+.server-card{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:15px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.server-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  filter:brightness(0.65);
+  transition:0.3s;
+}
+
+.server-card:hover{
+  transform:scale(1.03);
+  border-color:#a855f7;
+}
+
+.server-card:hover img{
+  transform:scale(1.05);
+  filter:brightness(0.8);
+}
+
+.server-info{
+  position:absolute;
+  bottom:15px;
+  left:15px;
+}
+
+.server-info h3{
+  margin-bottom:5px;
+}
+
+.server-info a{
+  color:#facc15;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.server-info a:hover{
+  text-decoration:underline;
+}
+
+.badge{
+  background:#a855f7;
+  padding:4px 8px;
+  border-radius:8px;
+  font-size:12px;
+  display:inline-block;
+  margin-top:5px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  color:#666;
+  font-size:12px;
+  margin-top:40px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(-20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .name{font-size:22px;}
+  .avatar{width:120px;height:120px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="logo">PORTUGA</div>
+  <div class="menu">☰</div>
+</div>
+
+<div class="profile">
+  <img src="https://i.imgur.com/QsXBePc.jpeg" class="avatar">
+  <div class="name">portuga</div>
+  <div class="role">Discord Staff • Moderator</div>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <h2>About Me</h2>
+    <div class="card">
+      Experienced Discord Staff member focused on moderation, ticket handling and community growth.
+      I ensure safe, active and organized communities.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="card">
+
+      <div class="skill">Moderation</div>
+      <div class="bar"><div class="progress" style="width:88%"></div></div>
+
+      <div class="skill">Ticket Handling</div>
+      <div class="bar"><div class="progress" style="width:75%"></div></div>
+
+      <div class="skill">Community Support</div>
+      <div class="bar"><div class="progress" style="width:92%"></div></div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Experience</h2>
+    <div class="card">
+      🛡️ Staff in multiple anime servers<br>
+      ⚡ Fast moderation & support<br>
+      🤝 Helping servers grow & stay active
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Servers</h2>
+
+    <div class="server-card">
+      <img src="https://i.imgur.com/OkFHCxK.jpeg">
+      <div class="server-info">
+        <h3>Anime Crash</h3>
+        <span class="badge">Trial Moderator</span><br>
+        <a href="https://discord.gg/uhsCy8e2jn" target="_blank">Visit Server →</a>
+      </div>
+    </div>
+
+    <div class="server-card">
+      <img src="https://i.imgur.com/EfdCjgJ.jpeg">
+      <div class="server-info">
+        <h3>Anime All</h3>
+        <span class="badge">Moderator</span><br>
+        <a href="https://discord.gg/HWaamV88AM" target="_blank">Visit Server →</a>
+      </div>
+    </div>
+
+    <div class="server-card">
+      <img src="https://i.imgur.com/DbxLw7W.jpeg">
+      <div class="server-info">
+        <h3>Anime Vikings X</h3>
+        <span class="badge">Trial Moderator</span><br>
+        <a href="https://discord.gg/r5apZRZ6aK" target="_blank">Visit Server →</a>
+      </div>
+    </div>
+
+  </div>
 
 </div>
 
-  </div>    <div class="section">  
-    <h2>Experience</h2>  
-    <div class="card">  
-      🛡️ Staff in multiple anime servers<br>  
-      ⚡ Fast moderation & support<br>  
-      🤝 Helping servers grow & stay active  
-    </div>  
-  </div>    <div class="section">  
-    <h2>Servers</h2>  <div class="server-card">  
-  <img src="https://i.imgur.com/Njv4Aq0.jpeg">  
-  <div class="server-info">  
-    <h3>Anime Crash</h3>  
-    <span class="badge">Trial Moderator</span><br>  
-    <a href="https://discord.gg/uhsCy8e2jn" target="_blank">Visit Server →</a>  
-  </div>  
-</div>  
+<footer>
+  © 2026 Portuga • Discord Portfolio
+</footer>
 
-<div class="server-card">  
-  <img src="https://i.imgur.com/EfdCjgJ.jpeg">  
-  <div class="server-info">  
-    <h3>Anime All</h3>  
-    <span class="badge">Moderator</span><br>  
-    <a href="https://discord.gg/HWaamV88AM" target="_blank">Visit Server →</a>  
-  </div>  
-</div>  
-
-<div class="server-card">  
-  <img src="https://i.imgur.com/DbxLw7W.jpeg">  
-  <div class="server-info">  
-    <h3>Anime Vikings X</h3>  
-    <span class="badge">Trial Moderator</span><br>  
-    <a href="https://discord.gg/r5apZRZ6aK" target="_blank">Visit Server →</a>  
-  </div>  
-</div>
-
-  </div>  </div>  <footer>  
-  © 2026 Portuga • Discord Portfolio  
-</footer>  </body>  
-</html> 
+</body>
+</html>
